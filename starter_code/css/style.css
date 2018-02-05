@@ -1,0 +1,40 @@
+body, html {
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-image: url("./../images/background.png");
+
+}
+
+
+.game-intro {
+  float: left;
+  padding: 0% 10%;
+}
+
+
+body button {
+  font-size: 30px;
+  font-family: Rammetto One, cursive;
+  background-color: #870007;
+  color: #fff;
+  padding: 20px 40px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: absolute;
+  margin-top: 600px;
+  margin-left: 400px;
+}
+
+#game-board {
+    float: left;
+    padding: 20px 0px;
+}

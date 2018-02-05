@@ -1,7 +1,7 @@
 let myGameArea = new Board(document)
   
 const startGame = () => {  
-    const myPlayer = new Player(135,530,document,'images/pennywise.png')
+    const myPlayer = new Player(135,530,document,'images/it-clown.png')
     let myObstacles = []
     const updateGame = () => {
         refreshScreen(myGameArea)
