@@ -5,7 +5,7 @@ class Ballon {
 		this.x = x
     this.y = y
     this.img = new Image();
-    this.img.src = ballon
+    this.img.src = IMAGES_PARAMS.BALLON
 //no funciona
   }
 

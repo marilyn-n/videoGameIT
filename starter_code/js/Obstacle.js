@@ -5,10 +5,19 @@ class Obstacle {
 		this.color = color
 		this.x = x
 		this.y = y
+		this.img = new Image();
+		this.img.src = IMAGES_PARAMS.PENNYWISE
+		this.img.onload = () => {
+			this.draw();
+		}
+	
 	}
 	update(board){
 		board.ctx.fillStyle = this.color
 		board.ctx.fillRect(this.x, this.y, this.width, this.height)
+	}
+	draw(board){
+		board.ctx.drawImage(this.img,this.x,this.y,this.width,this.height)
 	}
 	left() {
 		return this.x

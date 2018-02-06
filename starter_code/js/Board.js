@@ -26,21 +26,24 @@ class Board {
 	// ============gameOver
 	stop() {
 		clearInterval(this.interval)
-		this.ctx.fillStyle = '#870007'
+		this.ctx.fillStyle = '#FAE003'
 		this.ctx.fillRect(0,0,800,600)
 		this.ctx.font = '40px Shadows Into Light Two'
-		this.ctx.fillStyle = 'white'
-		this.ctx.fillText('You\'\ll float too!', 200, 250)
-		this.ctx.fillStyle = 'white'
-		this.ctx.fillText('Your final score', 200, 290)
+		this.ctx.fillStyle = 'black'
+		this.ctx.fillText('You\'\ll float too!', 300, 200)
+		this.ctx.fillStyle = 'black'
+		this.ctx.fillText('Your final score', 300, 430)
 		this.ctx.fillText(this.points, 400, 330)
+	 
 	}
 	score() {
 		this.points = (Math.floor(this.frames/50))
 		this.ctx.font = '18px serif'
 		this.ctx.fillStyle = 'white'
-		this.ctx.fillText('Score: ' + this.points, 60, 30)
+		this.ctx.fillText('Score: ' + this.points, 60, 30 )
+		
 	}   
+	
 	drawPlayer(player) {
 		this.ctx.drawImage(player.img, player.x, player.y, 40,70)
 	}      

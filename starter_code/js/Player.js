@@ -46,14 +46,15 @@ class Player {
 	bottom() {
 		return this.y + 60
 	}
-
+	
+//si choca
 	isCrash(obstacle) {
 		const isBottom = this.bottom() < obstacle.top()
 		const isTop = this.top() > obstacle.bottom()
 		const isRight = this.right() < obstacle.left()
 		const isLeft = this.left() > obstacle.right()
 		return !(isBottom || isTop || isLeft || isRight)
-    }
+		}
     
 	createKeydownFn(e) {
 		return (e) => {
