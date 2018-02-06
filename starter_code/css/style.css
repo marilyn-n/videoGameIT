@@ -3,38 +3,74 @@ body, html {
   height: 100%;
   margin: 0;
   position: relative;
-  opacity: 0.65;
+  opacity: 0.8;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  background-image: url("./../images/background.png");
+  background-image: url("./../images/background-img.png");
 
 }
 
 
 .game-intro {
-  float: left;
-  padding: 0% 10%;
+  /* float: left;
+  padding: 0% 10%; */
 }
 
 
 body button {
-  font-size: 30px;
-  font-family: Rammetto One, cursive;
-  background-color: #870007;
-  color: #fff;
-  padding: 20px 40px;
-  border: 0;
-  box-shadow: 0;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  position: absolute;
-  margin-top: 600px;
-  margin-left: 400px;
+  background-color: red;
+  color: #FFFFFF;
+  font-size: 2em; /* change this to change size */
+  height: 3em;
+  margin: 20px auto;
+  padding: 0;
+  border:0;
+  position: relative;
+  text-align: center;
+  text-indent: 0.1em;
+  transition: all 150ms ease-out;
+  width: 7em;
+  margin-top: 10px;
+  margin-left: 800px;
+  font-weight: bolder;
+  font-family: Shadows Into Light Two;
 }
+
+button:hover{
+  background: yellow;
+}
+
+
 
 #game-board {
     float: left;
     padding: 20px 0px;
+}
+
+.arrows{
+  margin-left: 770px;
+  margin-top:20px;
+  height: 70px;
+  width: 110px;
+}
+
+p{
+  font-size: 18px;
+  font-family: Shadows Into Light Two;
+  color: white;
+  margin-left: 800px;
+  font-weight: bold;
+}
+
+
+.ballon{
+  height: 130px;
+  width: 110px;
+  margin-left: 800px;
+}
+
+.pennywise{
+  height: 100px;
+  width: 110px;
+  margin-left: 800px;
 }

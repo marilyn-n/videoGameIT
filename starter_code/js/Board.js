@@ -7,8 +7,8 @@ class Board {
 		this.interval = null
 	}
 	drawTrack(){
-		this.ctx.fillStyle='#8C5875'
-		this.ctx.fillRect(42,0,800,600)
+		this.ctx.fillStyle='black'
+		this.ctx.fillRect(0,0,800,600)
 
 	}
 	start() {
@@ -19,28 +19,31 @@ class Board {
 		this.ctx = this.canvas.getContext('2d')
 		this.doc.body.insertBefore(this.canvas, this.doc.body.childNodes[0])
 	}
+
 	clear() {
 		this.ctx.clearRect(0,0, this.canvas.width, this.canvas.height)
 	} 
+
+	// ============gameOver
 	stop() {
 		clearInterval(this.interval)
 		this.ctx.fillStyle = '#870007'
 		this.ctx.fillRect(0,0,800,600)
-		this.ctx.font = '40px Rammetto One, cursive'
+		this.ctx.font = '40px Shadows Into Light Two'
 		this.ctx.fillStyle = 'white'
-		this.ctx.fillText('Game Over!', 75, 250)
+		this.ctx.fillText('You\'\ll float too!', 200, 250)
 		this.ctx.fillStyle = 'white'
-		this.ctx.fillText('Your final score', 60, 290)
-		this.ctx.fillText(this.points, 130, 330)
+		this.ctx.fillText('Your final score', 200, 290)
+		this.ctx.fillText(this.points, 400, 330)
 	}
 	score() {
 		this.points = (Math.floor(this.frames/50))
 		this.ctx.font = '18px serif'
 		this.ctx.fillStyle = 'white'
-		this.ctx.fillText('Score: '+this.points, 60, 30)
+		this.ctx.fillText('Score: ' + this.points, 60, 30)
 	}   
 	drawPlayer(player) {
-		this.ctx.drawImage(player.img, player.x, player.y, 30,60)
+		this.ctx.drawImage(player.img, player.x, player.y, 40,70)
 	}      
       
 }

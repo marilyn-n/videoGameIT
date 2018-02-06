@@ -14,20 +14,20 @@ class Player {
 	}
 
 	moveRight() {
-		if (this.x < 225){ // X_MAX
-			this.x += 10 //X_INCREMENT
+		if (this.x < PLAYER_PARAMS.X.MAX){ // X_MAX
+			this.x += PLAYER_PARAMS.X.INCREMENT //X_INCREMENT
 		}
 	}
 
 	moveUp() {
-		if (this.y > 40){
-			this.y -= 10
+		if (this.y > PLAYER_PARAMS.Y.MIN){ //Y_MIN
+			this.y -= PLAYER_PARAMS.Y.DECREMENT //Y_DECREMENT
 		}
 	}
 
 	moveDown() {
-		if (this.y < 520){
-			this.y += 10
+		if (this.y < PLAYER_PARAMS.Y.MAX){ //Y_MAX
+			this.y += PLAYER_PARAMS.Y.INCREMENT //Y_INCREMENT
 		}
 	}
 
@@ -36,7 +36,7 @@ class Player {
 	}
 
 	right() {
-		return this.x+30
+		return this.x + 30
 	}
 
 	top() {
@@ -44,7 +44,7 @@ class Player {
 	}
 
 	bottom() {
-		return this.y+60
+		return this.y + 60
 	}
 
 	isCrash(obstacle) {
@@ -67,7 +67,7 @@ class Player {
 
             const downAudio = new Audio(PLAYER_PARAMS.AUDIO.DOWN.FILE_PATH)
             downAudio.volume = PLAYER_PARAMS.AUDIO.DOWN.VOLUME
-            //repetir todos rigth,up,down
+            //left,rigth,up,down
 			switch (e.keyCode){
 			case 37:
 				this.moveLeft()
@@ -79,11 +79,9 @@ class Player {
 				break
 			case 38:
                 this.moveUp()
-                upAudio.play()
 				break
 			case 40:
                 this.moveDown()
-                downAudio.play()
 				break
 			} 
 		}
