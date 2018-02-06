@@ -12,10 +12,9 @@ const startGame = () => {
 		if(isCollision(myPlayer,myObstacles)) {
 			myGameArea.stop()  			
 			endAudio.play()
-			endAudio.volume = 2
+			endAudio.volume = 1.5
 		}
 	}
-	
 	myGameArea.start() 
 	document.onkeydown  = myPlayer.createKeydownFn()
 	myGameArea.interval = setInterval(updateGame, 20)

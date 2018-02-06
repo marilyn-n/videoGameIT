@@ -20,6 +20,8 @@ const OBSTACLE_PARAMS = {
 
 const BALLON_PARAMS = {
 
+
+
 }
 
 const BOARD_PARAMS = {

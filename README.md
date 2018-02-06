@@ -1,2 +1,2 @@
-# it-clown
-My first horror game
+# My first project
+Georgie vs Pennywise

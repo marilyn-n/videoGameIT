@@ -6,9 +6,9 @@
 
 ### Game Start image
 
-### Pennywise playing
+### Children playing
 
-### Children falling image
+### Pennywise falling image
 
 ### game end image
 

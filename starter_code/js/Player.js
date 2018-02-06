@@ -46,7 +46,6 @@ class Player {
 	bottom() {
 		return this.y + 60
 	}
-	
 //si choca
 	isCrash(obstacle) {
 		const isBottom = this.bottom() < obstacle.top()
