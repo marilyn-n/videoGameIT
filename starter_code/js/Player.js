@@ -8,26 +8,26 @@ class Player {
 	}
 
 	moveLeft() {
-		if (this.x > PLAYER_PARAMS.X.MIN){ // X_MIN
-			this.x -= PLAYER_PARAMS.X.DECREMENT  // X_DECREMENT
+		if (this.x > PLAYER_PARAMS.X.MIN){ 
+			this.x -= PLAYER_PARAMS.X.DECREMENT  
 		}
 	}
 
 	moveRight() {
-		if (this.x < PLAYER_PARAMS.X.MAX){ // X_MAX
-			this.x += PLAYER_PARAMS.X.INCREMENT //X_INCREMENT
+		if (this.x < PLAYER_PARAMS.X.MAX){ 
+			this.x += PLAYER_PARAMS.X.INCREMENT 
 		}
 	}
 
 	moveUp() {
-		if (this.y > PLAYER_PARAMS.Y.MIN){ //Y_MIN
-			this.y -= PLAYER_PARAMS.Y.DECREMENT //Y_DECREMENT
+		if (this.y > PLAYER_PARAMS.Y.MIN){ 
+			this.y -= PLAYER_PARAMS.Y.DECREMENT 
 		}
 	}
 
 	moveDown() {
-		if (this.y < PLAYER_PARAMS.Y.MAX){ //Y_MAX
-			this.y += PLAYER_PARAMS.Y.INCREMENT //Y_INCREMENT
+		if (this.y < PLAYER_PARAMS.Y.MAX){ 
+			this.y += PLAYER_PARAMS.Y.INCREMENT 
 		}
 	}
 
@@ -53,35 +53,30 @@ class Player {
 		const isRight = this.right() < obstacle.left()
 		const isLeft = this.left() > obstacle.right()
 		return !(isBottom || isTop || isLeft || isRight)
-	}
+    }
+    
 	createKeydownFn(e) {
 		return (e) => {
 			const leftAudio = new Audio(PLAYER_PARAMS.AUDIO.LEFT.FILE_PATH)
-            leftAudio.volume = PLAYER_PARAMS.AUDIO.LEFT.VOLUME
+			leftAudio.volume = PLAYER_PARAMS.AUDIO.LEFT.VOLUME
 
-            const rightAudio = new Audio(PLAYER_PARAMS.AUDIO.RIGHT.FILE_PATH)
+			const rightAudio = new Audio(PLAYER_PARAMS.AUDIO.RIGHT.FILE_PATH)
             rightAudio.volume = PLAYER_PARAMS.AUDIO.RIGHT.VOLUME
-
-            const upAudio = new Audio(PLAYER_PARAMS.AUDIO.UP.FILE_PATH)
-            upAudio.volume = PLAYER_PARAMS.AUDIO.UP.VOLUME
-
-            const downAudio = new Audio(PLAYER_PARAMS.AUDIO.DOWN.FILE_PATH)
-            downAudio.volume = PLAYER_PARAMS.AUDIO.DOWN.VOLUME
-            //left,rigth,up,down
+            
 			switch (e.keyCode){
 			case 37:
 				this.moveLeft()
 				leftAudio.play()
 				break
 			case 39:
-                this.moveRight()
-                rightAudio.play()
+				this.moveRight()
+				rightAudio.play()
 				break
 			case 38:
-                this.moveUp()
+				this.moveUp()
 				break
 			case 40:
-                this.moveDown()
+				this.moveDown()
 				break
 			} 
 		}

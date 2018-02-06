@@ -1,7 +1,7 @@
 let myGameArea = new Board(document)
   
 const startGame = () => {  
-	const myPlayer = new Player(400,530,document,'images/gorgie.png')
+	const myPlayer = new Player(400,530,document, IMAGES_PARAMS.GORGIE)
 	let myObstacles = []
 	const updateGame = () => {
 		refreshScreen(myGameArea)
@@ -10,7 +10,7 @@ const startGame = () => {
 		myGameArea.drawPlayer(myPlayer)
 		myGameArea.score()
 		if(isCollision(myPlayer,myObstacles)) {
-            myGameArea.stop()  
+			myGameArea.stop()  
 
 		}
 	}

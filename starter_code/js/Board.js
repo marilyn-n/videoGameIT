@@ -2,8 +2,8 @@ class Board {
 	constructor(doc){
 		this.doc = doc
 		this.canvas = this.doc.createElement('canvas')
-		this.frames = 0
-		this.points = 0
+		this.frames = BOARD_PARAMS.FRAMES
+		this.points = BOARD_PARAMS.POINTS
 		this.interval = null
 	}
 	drawTrack(){
@@ -12,14 +12,13 @@ class Board {
 
 	}
 	start() {
-		this.frames = 0
+		this.frames = BOARD_PARAMS.FRAMES
 		clearInterval(this.interval)
 		this.canvas.width = 800
 		this.canvas.height = 600
 		this.ctx = this.canvas.getContext('2d')
 		this.doc.body.insertBefore(this.canvas, this.doc.body.childNodes[0])
 	}
-
 	clear() {
 		this.ctx.clearRect(0,0, this.canvas.width, this.canvas.height)
 	} 

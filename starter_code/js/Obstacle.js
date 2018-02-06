@@ -19,7 +19,7 @@ class Obstacle {
 	}
 
 	top() {
-        return this.y           
+		return this.y           
 
 	}
 

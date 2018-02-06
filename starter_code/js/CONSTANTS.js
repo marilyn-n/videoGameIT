@@ -17,7 +17,20 @@ const OBSTACLE_PARAMS = {
 
 }
 
-const BOARD_PARAMS = {
 
+const BALLON_PARAMS = {
+
+}
+
+const BOARD_PARAMS = {
+  'FRAMES' : 0,
+  'POINTS' : 0,
+
+}
+
+
+const IMAGES_PARAMS = {
+  'BALLON' : './images/ballon.png',
+  'GORGIE' :'images/gorgie.png',
 }
 
