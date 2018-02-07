@@ -7,7 +7,6 @@ const PLAYER_PARAMS = {
 		'UP': {'FILE_PATH':'./audio/it-main-laugh.mp3', 'VOLUME': 0.8},
 		'DOWN': {'FILE_PATH':'./audio/it-main-hi.mp3', 'VOLUME': 0.8}
 	}
-
 }
 
 const OBSTACLE_PARAMS = {
@@ -19,20 +18,16 @@ const OBSTACLE_PARAMS = {
 		'RIGHT' : {'X': 150, 'Y': 0 },
 		'LEFT' : {'X': 650,'Y': 0 }
 	}
-
-
 }
 
 
 const BALLOON_PARAMS = {
-
 
 }
 
 const BOARD_PARAMS = {
 	'FRAMES' : 0,
 	'POINTS' : 0
-
 }
 
 

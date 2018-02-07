@@ -1,4 +1,4 @@
-const isCollision = (player,obstacles) => {
+const isCollision = (player, obstacles) => {
 	for (let obstacle of obstacles){
 		if (player.isCrash(obstacle)) {
 			return true
@@ -12,12 +12,12 @@ const refreshScreen = (board) => {
 	board.frames++
 }
 
-const createObstacle = (obstacles,frames) => {
+const createObstacle = (obstacles, frames) => {
 	const IN = OBSTACLE_PARAMS
 	if (frames % IN.CREATE_INTERVAL === 0){
 		const width = randomWidth(IN.MAX_WIDTH, IN.MIN_WIDTH)
 		const side = randomSide()
-		obstacles.push(randomObstacle(side, width))
+		obstacles.push(randomObstacle(side, width, IN))
 	}
 }
 
@@ -33,8 +33,7 @@ const randomSide = () => {
 }
 
 
-const randomObstacle = (side, width) => {
-	const IN =OBSTACLE_PARAMS
+const randomObstacle = (side, width, IN) => {
 	const left = IN.COORDINATE.LEFT
 	const right = IN.COORDINATE.RIGHT
 	let out
