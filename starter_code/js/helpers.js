@@ -9,30 +9,53 @@ const isCollision = (player,obstacles) => {
 const refreshScreen = (board) => {
 	board.clear()
 	board.drawTrack()
-	board.frames ++
-
+	board.frames++
 }
 
 const createObstacle = (obstacles,frames) => {
-	if (frames % 150 === 0){
-		minWidth = 50
-		maxWidth = 150
-		height = 20
-		side = Math.floor(Math.random()*2)+1
-		width = Math.floor(Math.random()*(maxWidth-minWidth+1)+minWidth)
-		if (side === 1){
-			obstacles.push(new Obstacle(width, height, 'black', 650 - width, 0 ))
-		} else {
-			obstacles.push(new Obstacle(width, height, 'black', 150, 0 ))
-		}
+	const IN = OBSTACLE_PARAMS
+	if (frames % IN.CREATE_INTERVAL === 0){
+		const width = randomWidth(IN.MAX_WIDTH, IN.MIN_WIDTH)
+		const side = randomSide()
+		obstacles.push(randomObstacle(side, width))
 	}
+}
+
+const randomSide = () => {
+	let out
+	const side = Math.floor(Math.random() * 2) + 1
+	if (side === 0) {
+		out = 'left'
+	} else {
+		out = 'right'
+	}
+	return out
+}
+
+
+const randomObstacle = (side, width) => {
+	const IN =OBSTACLE_PARAMS
+	const left = IN.COORDINATE.LEFT
+	const right = IN.COORDINATE.RIGHT
+	let out
+	if (side === 'left') {
+		out = (new Obstacle (width, IN.HEIGHT, 'black', left.X - width, left.Y))
+	} else if (side === 'right'){
+		out = (new Obstacle (width, IN.HEIGHT, 'black', right.X, right.Y))
+	}
+	return out
+}
+	
+
+
+const randomWidth = (	maxWidth, minWidth) => {
+	let width =  Math.floor(Math.random() * (maxWidth - minWidth + 1) + minWidth)
+	return width
 }
 
 const refreshObstacles = (obstacles,board) => {
 	for (let obstacle of obstacles){
-		obstacle.y ++
-		//obstacle.update(board)
-		obstacle.draw(board);
+		obstacle.y++
+		obstacle.draw(board)
 	}
-
 }

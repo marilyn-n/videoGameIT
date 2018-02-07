@@ -1,4 +1,4 @@
-class Ballon {
+class Balloon {
 	constructor(width, height, color, x, y){  
 		this.width = width
 		this.height = height
@@ -6,9 +6,9 @@ class Ballon {
 		this.x = x
 		this.y = y
 		this.img = new Image();
-		this.img.src = IMAGES_PARAMS.BALLON
+		this.img.src = IMAGES_PARAMS.BALLOON
 		this.img.onload = () => {
-			this.drawBallon();
+			this.drawBalloon();
 		}
 	
 	}
@@ -16,7 +16,7 @@ class Ballon {
 		board.ctx.fillStyle = this.color
 		board.ctx.fillRect(this.x, this.y, this.width, this.height)
 	}
-	drawBallon(board){
+	drawBalloon(board){
 		board.ctx.drawImage(this.img,this.x,this.y,this.width,this.height)
 	}
 	left() {

@@ -8,7 +8,7 @@ class Obstacle {
 		this.img = new Image();
 		this.img.src = IMAGES_PARAMS.PENNYWISE
 		this.img.onload = () => {
-			this.draw();
+			this.draw()
 		}
 	
 	}

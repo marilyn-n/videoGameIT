@@ -5,35 +5,40 @@ const PLAYER_PARAMS = {
 		'LEFT': {'FILE_PATH':'./audio/it-main-hi.mp3', 'VOLUME': 0.8},
 		'RIGHT': {'FILE_PATH':'./audio/it-main-cut-georgie.mp3', 'VOLUME': 0.8},
 		'UP': {'FILE_PATH':'./audio/it-main-laugh.mp3', 'VOLUME': 0.8},
-		'DOWN': {'FILE_PATH':'./audio/it-main-hi.mp3', 'VOLUME': 0.8},
+		'DOWN': {'FILE_PATH':'./audio/it-main-hi.mp3', 'VOLUME': 0.8}
 	}
 
 }
 
 const OBSTACLE_PARAMS = {
-	'minWidth' : 50,
-	'maxWidth' : 150,
-	'height' : 20,
+	'MIN_WIDTH' : 50,
+	'MAX_WIDTH' : 150,
+	'HEIGHT' : 20,
+	'CREATE_INTERVAL' : 150,
+	'COORDINATE' : { 
+		'RIGHT' : {'X': 150, 'Y': 0 },
+		'LEFT' : {'X': 650,'Y': 0 }
+	}
+
 
 }
 
 
-const BALLON_PARAMS = {
-
+const BALLOON_PARAMS = {
 
 
 }
 
 const BOARD_PARAMS = {
-  'FRAMES' : 0,
-  'POINTS' : 0,
+	'FRAMES' : 0,
+	'POINTS' : 0
 
 }
 
 
 const IMAGES_PARAMS = {
-  'BALLON' : './images/ballon.png',
-	'GORGIE' :'./images/gorgie.png',
+	'BALLOON' : './images/balloon.png',
+	'GEORGIE' :'./images/georgie.png',
 	'PENNYWISE' : './images/it-clown.png'
 }
 
