@@ -11,7 +11,7 @@
 ### Pennywise falling image
 
 ### game end image
-
+.
 ## Sound
 
 ### play sound in background
