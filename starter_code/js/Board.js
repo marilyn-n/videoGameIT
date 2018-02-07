@@ -34,8 +34,8 @@ class Board {
 		this.ctx.fillStyle = 'black'
 		this.ctx.fillText('Your final score', 300, 430)
 		this.ctx.fillText(this.points, 400, 330)
+	 
 	}
-	
 	score() {
 		this.points = (Math.floor(this.frames/50))
 		this.ctx.font = '18px serif'
