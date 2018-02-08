@@ -12,6 +12,7 @@ const PLAYER_PARAMS = {
             
 const endAudio = new Audio(PLAYER_PARAMS.AUDIO.END.FILE_PATH)
 endAudio.volume = PLAYER_PARAMS.AUDIO.END.VOLUME
+
 const leftAudio = new Audio(PLAYER_PARAMS.AUDIO.LEFT.FILE_PATH)
 leftAudio.volume = PLAYER_PARAMS.AUDIO.LEFT.VOLUME
 const rightAudio = new Audio(PLAYER_PARAMS.AUDIO.RIGHT.FILE_PATH)

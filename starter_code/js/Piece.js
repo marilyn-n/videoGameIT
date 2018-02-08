@@ -18,6 +18,7 @@ class Piece {
 		board.ctx.fillRect(this.x, this.y, this.width, this.height)
   }
 	draw(board){
+		console.log(board)
 		board.ctx.drawImage(this.img,this.x,this.y,this.width,this.height)
 	}
 	left() {

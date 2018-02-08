@@ -35,7 +35,7 @@ const randomType = () => {
 const randomSide = () => {
 	let out
 	const side = Math.floor(Math.random() * 2) + 1
-	if (side === 0) {
+	if (side === 1) {
 		out = 'left'
 	} else {
 		out = 'right'

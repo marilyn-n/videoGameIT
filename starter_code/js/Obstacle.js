@@ -10,7 +10,6 @@ class Obstacle {
 		this.img.onload = () => {
 			this.draw()
 		}
-	
 	}
 	update(board){
 		board.ctx.fillStyle = this.color
