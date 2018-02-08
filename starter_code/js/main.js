@@ -1,3 +1,4 @@
+
 const backgroundAudio = new Audio('./audio/it-main-cut.mp3')
 backgroundAudio.volume = 0.3
 backgroundAudio.play()

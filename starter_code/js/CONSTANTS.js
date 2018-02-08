@@ -8,7 +8,6 @@ const PLAYER_PARAMS = {
 		'DOWN': {'FILE_PATH':'./audio/it-main-hi.mp3', 'VOLUME': 0.8},
 	   'END':{'FILE_PATH': './audio/pennywise-laugh.mp3', 'VOLUME': 1}
 	}
-
 }
             
 const endAudio = new Audio(PLAYER_PARAMS.AUDIO.END.FILE_PATH)
@@ -34,13 +33,11 @@ const OBSTACLE_PARAMS = {
 
 const BALLOON_PARAMS = {
 
-
 }
 
 const BOARD_PARAMS = {
 	'FRAMES' : 0,
 	'POINTS' : 0
-
 }
 
 
