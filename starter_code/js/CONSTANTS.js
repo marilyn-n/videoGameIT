@@ -9,12 +9,13 @@ const PLAYER_PARAMS = {
 	   'END':{'FILE_PATH': './audio/pennywise-laugh.mp3', 'VOLUME': 1}
 	}
 }
-            
+//game over sound           
 const endAudio = new Audio(PLAYER_PARAMS.AUDIO.END.FILE_PATH)
 endAudio.volume = PLAYER_PARAMS.AUDIO.END.VOLUME
-
+//left arrow sound
 const leftAudio = new Audio(PLAYER_PARAMS.AUDIO.LEFT.FILE_PATH)
 leftAudio.volume = PLAYER_PARAMS.AUDIO.LEFT.VOLUME
+//right arrow sound
 const rightAudio = new Audio(PLAYER_PARAMS.AUDIO.RIGHT.FILE_PATH)
 rightAudio.volume = PLAYER_PARAMS.AUDIO.RIGHT.VOLUME
 

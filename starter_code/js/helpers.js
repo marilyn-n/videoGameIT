@@ -22,25 +22,13 @@ const createPiece = (pieces,frames) => {
 	}
 }
 const randomType = () => {
-	let out
 	const type = Math.floor(Math.random() * 2) + 1
-	if (type === 0) {
-		out = 'balloon'
-	} else {
-		out = 'obstacle'
-	}
-	return out
+	return (type === 0 ? 'balloon' : 'obstacle')
 }
 
 const randomSide = () => {
-	let out
 	const side = Math.floor(Math.random() * 2) + 1
-	if (side === 1) {
-		out = 'left'
-	} else {
-		out = 'right'
-	}
-	return out
+	return (side === 2 ? 'left' : 'right')
 }
 
 const randomPiece = (side, width, type) => {
