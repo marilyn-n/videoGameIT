@@ -22,9 +22,9 @@ rightAudio.volume = PLAYER_PARAMS.AUDIO.RIGHT.VOLUME
 
 
 const OBSTACLE_PARAMS = {
-	'MIN_WIDTH' : 50,
-	'MAX_WIDTH' : 150,
-	'HEIGHT' : 20,
+	'MIN_WIDTH' : 70,
+	'MAX_WIDTH' : 140,
+	'HEIGHT' : 30,
 	'CREATE_INTERVAL' : 150,
 	'COORDINATE' : { 
 		'RIGHT' : {'X': 150, 'Y': 0 },

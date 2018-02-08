@@ -13,7 +13,6 @@ class Player {
 		}
 	}
 
-
 	moveRight() {
 		if (this.x < PLAYER_PARAMS.X.MAX){ 
 			this.x += PLAYER_PARAMS.X.INCREMENT 
@@ -46,7 +45,7 @@ class Player {
 		const isTop = this.top() > obstacle.bottom()
 		const isRight = this.right() < obstacle.left()
 		const isLeft = this.left() > obstacle.right()
-		return !(isBottom || isTop || isLeft || isRight) && isObstacle
+		return !(isBottom || isTop || isLeft || isRight) //&& isObstacle
 	}    
 
 	createKeydownFn(e) {

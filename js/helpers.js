@@ -37,7 +37,7 @@ const randomPiece = (side, width, type) => {
 	const right = IN.COORDINATE.RIGHT
 	let out
 	if (side === 'left') {
-		out = (new Piece (width, IN.HEIGHT, 'black', left.X - width, left.Y,  type))
+		out = (new Piece (width, IN.HEIGHT, 'black', left.X - width, left.Y, type))
 	} else if (side === 'right'){
 		out = (new Piece (width, IN.HEIGHT, 'black', right.X, right.Y, type))
 	}
@@ -50,7 +50,6 @@ const randomWidth = (	maxWidth, minWidth) => {
 }
 
 const refreshPieces = (pieces, board) => {
-	//console.log(board)
 	for (let piece of pieces){
 		piece.y++
 		piece.draw(board)
