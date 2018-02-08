@@ -46,23 +46,18 @@ class Player {
 	bottom() {
 		return this.y + 60
 	}
-//si choca
+	//si choca
 	isCrash(obstacle) {
+		const isObstacle = this.type === 'obstacle'
 		const isBottom = this.bottom() < obstacle.top()
 		const isTop = this.top() > obstacle.bottom()
 		const isRight = this.right() < obstacle.left()
 		const isLeft = this.left() > obstacle.right()
-		return !(isBottom || isTop || isLeft || isRight)
-		}
-    
+		return !(isBottom || isTop || isLeft || isRight) && isObstacle
+	}    
+
 	createKeydownFn(e) {
 		return (e) => {
-			const leftAudio = new Audio(PLAYER_PARAMS.AUDIO.LEFT.FILE_PATH)
-			leftAudio.volume = PLAYER_PARAMS.AUDIO.LEFT.VOLUME
-
-			const rightAudio = new Audio(PLAYER_PARAMS.AUDIO.RIGHT.FILE_PATH)
-            rightAudio.volume = PLAYER_PARAMS.AUDIO.RIGHT.VOLUME
-            
 			switch (e.keyCode){
 			case 37:
 				this.moveLeft()

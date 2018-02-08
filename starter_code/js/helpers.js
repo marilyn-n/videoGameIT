@@ -1,6 +1,6 @@
-const isCollision = (player,obstacles) => {
-	for (let obstacle of obstacles){
-		if (player.isCrash(obstacle)) {
+const isCollision = (player,pieces) => {
+	for (let piece of pieces){
+		if (player.isCrash(piece)) {
 			return true
 		}
 	}
@@ -12,13 +12,24 @@ const refreshScreen = (board) => {
 	board.frames++
 }
 
-const createObstacle = (obstacles,frames) => {
+const createPiece = (pieces,frames) => {
 	const IN = OBSTACLE_PARAMS
 	if (frames % IN.CREATE_INTERVAL === 0){
 		const width = randomWidth(IN.MAX_WIDTH, IN.MIN_WIDTH)
 		const side = randomSide()
-		obstacles.push(randomObstacle(side, width))
+		const type = randomType()
+		pieces.push(randomPiece(side, width, type))
 	}
+}
+const randomType = () => {
+	let out
+	const type = Math.floor(Math.random() * 2) + 1
+	if (type === 0) {
+		out = 'balloon'
+	} else {
+		out = 'obstacle'
+	}
+	return out
 }
 
 const randomSide = () => {
@@ -32,30 +43,27 @@ const randomSide = () => {
 	return out
 }
 
-
-const randomObstacle = (side, width) => {
-	const IN =OBSTACLE_PARAMS
+const randomPiece = (side, width, type) => {
+	const IN = OBSTACLE_PARAMS
 	const left = IN.COORDINATE.LEFT
 	const right = IN.COORDINATE.RIGHT
 	let out
 	if (side === 'left') {
-		out = (new Obstacle (width, IN.HEIGHT, 'black', left.X - width, left.Y))
+		out = (new Piece (width, IN.HEIGHT, 'black', left.X - width, left.Y,  type))
 	} else if (side === 'right'){
-		out = (new Obstacle (width, IN.HEIGHT, 'black', right.X, right.Y))
+		out = (new Piece (width, IN.HEIGHT, 'black', right.X, right.Y, type))
 	}
 	return out
 }
-	
-
 
 const randomWidth = (	maxWidth, minWidth) => {
 	let width =  Math.floor(Math.random() * (maxWidth - minWidth + 1) + minWidth)
 	return width
 }
 
-const refreshObstacles = (obstacles,board) => {
-	for (let obstacle of obstacles){
-		obstacle.y++
-		obstacle.draw(board)
+const refreshPieces = (pieces, board) => {
+	for (let piece of pieces){
+		piece.y++
+		piece.draw(board)
 	}
 }

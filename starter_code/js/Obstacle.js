@@ -5,7 +5,7 @@ class Obstacle {
 		this.color = color
 		this.x = x
 		this.y = y
-		this.img = new Image();
+		this.img = new Image()
 		this.img.src = IMAGES_PARAMS.PENNYWISE
 		this.img.onload = () => {
 			this.draw()

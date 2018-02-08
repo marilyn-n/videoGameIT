@@ -5,10 +5,20 @@ const PLAYER_PARAMS = {
 		'LEFT': {'FILE_PATH':'./audio/it-main-hi.mp3', 'VOLUME': 0.8},
 		'RIGHT': {'FILE_PATH':'./audio/it-main-cut-georgie.mp3', 'VOLUME': 0.8},
 		'UP': {'FILE_PATH':'./audio/it-main-laugh.mp3', 'VOLUME': 0.8},
-		'DOWN': {'FILE_PATH':'./audio/it-main-hi.mp3', 'VOLUME': 0.8}
+		'DOWN': {'FILE_PATH':'./audio/it-main-hi.mp3', 'VOLUME': 0.8},
+	   'END':{'FILE_PATH': './audio/pennywise-laugh.mp3', 'VOLUME': 1}
 	}
 
 }
+            
+const endAudio = new Audio(PLAYER_PARAMS.AUDIO.END.FILE_PATH)
+endAudio.volume = PLAYER_PARAMS.AUDIO.END.VOLUME
+const leftAudio = new Audio(PLAYER_PARAMS.AUDIO.LEFT.FILE_PATH)
+leftAudio.volume = PLAYER_PARAMS.AUDIO.LEFT.VOLUME
+const rightAudio = new Audio(PLAYER_PARAMS.AUDIO.RIGHT.FILE_PATH)
+rightAudio.volume = PLAYER_PARAMS.AUDIO.RIGHT.VOLUME
+
+
 
 const OBSTACLE_PARAMS = {
 	'MIN_WIDTH' : 50,
@@ -19,8 +29,6 @@ const OBSTACLE_PARAMS = {
 		'RIGHT' : {'X': 150, 'Y': 0 },
 		'LEFT' : {'X': 650,'Y': 0 }
 	}
-
-
 }
 
 
