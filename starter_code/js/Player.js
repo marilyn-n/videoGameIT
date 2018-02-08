@@ -13,6 +13,7 @@ class Player {
 		}
 	}
 
+
 	moveRight() {
 		if (this.x < PLAYER_PARAMS.X.MAX){ 
 			this.x += PLAYER_PARAMS.X.INCREMENT 
@@ -31,22 +32,14 @@ class Player {
 		}
 	}
 
-	left() {
-		return this.x
-	}
+	left() { return this.x }
 
-	right() {
-		return this.x + 30
-	}
+	right() { return this.x + 30 }
 
-	top() {
-		return this.y
-	}
+	top() { return this.y }
 
-	bottom() {
-		return this.y + 60
-	}
-	//si choca
+	bottom() { return this.y + 60 }
+
 	isCrash(obstacle) {
 		const isObstacle = this.type === 'obstacle'
 		const isBottom = this.bottom() < obstacle.top()

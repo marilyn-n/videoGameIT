@@ -10,31 +10,20 @@ class Balloon {
 		this.img.onload = () => {
 			this.drawBalloon()
 		}
-	
 	}
+
 	update(board){
 		board.ctx.fillStyle = this.color
 		board.ctx.fillRect(this.x, this.y, this.width, this.height)
 	}
-	drawBalloon(board){
-		board.ctx.drawImage(this.img,this.x,this.y,this.width,this.height)
-	}
-	left() {
-		return this.x
-	}
 
-	right() {
-		return this.x + this.width
-	}
+	drawBalloon(board){	board.ctx.drawImage(this.img,this.x,this.y,this.width,this.height)}
 
-	top() {
-		return this.y           
+	left() { return this.x }
 
-	}
+	right() { return this.x + this.width }
 
-	bottom() {
-		return this.y + this.height
-	}
+	top() { return this.y }
+	
+	bottom() { return this.y + this.height }
 }
-
-

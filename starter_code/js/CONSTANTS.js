@@ -32,7 +32,6 @@ const OBSTACLE_PARAMS = {
 	}
 }
 
-
 const BALLOON_PARAMS = {
 
 }

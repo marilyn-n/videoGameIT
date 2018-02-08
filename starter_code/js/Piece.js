@@ -18,25 +18,13 @@ class Piece {
 		board.ctx.fillRect(this.x, this.y, this.width, this.height)
   }
 	draw(board){
-		console.log(board)
 		board.ctx.drawImage(this.img,this.x,this.y,this.width,this.height)
 	}
-	left() {
-		return this.x
-	}
+	left() { return this.x }
 
-	right() {
-		return this.x + this.width
-	}
+	right() { return this.x + this.width }
 
-	top() {
-		return this.y           
+	top() { return this.y }
 
-	}
-
-	bottom() {
-		return this.y + this.height
-	}
+	bottom() { return this.y + this.height }
 }
-
-

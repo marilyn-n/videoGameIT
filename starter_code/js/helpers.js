@@ -23,12 +23,12 @@ const createPiece = (pieces,frames) => {
 }
 const randomType = () => {
 	const type = Math.floor(Math.random() * 2) + 1
-	return (type === 0 ? 'balloon' : 'obstacle')
+	return (type === 1 ? 'balloon' : 'obstacle')
 }
 
 const randomSide = () => {
 	const side = Math.floor(Math.random() * 2) + 1
-	return (side === 2 ? 'left' : 'right')
+	return (side === 1 ? 'left' : 'right')
 }
 
 const randomPiece = (side, width, type) => {
@@ -50,6 +50,7 @@ const randomWidth = (	maxWidth, minWidth) => {
 }
 
 const refreshPieces = (pieces, board) => {
+	//console.log(board)
 	for (let piece of pieces){
 		piece.y++
 		piece.draw(board)
