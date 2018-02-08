@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 const isCollision = (player,pieces) => {
 	for (let piece of pieces){
 		if (player.isCrash(piece)) {
-=======
-const isCollision = (player, obstacles) => {
-	for (let obstacle of obstacles){
-		if (player.isCrash(obstacle)) {
->>>>>>> 7dee930b453bb78bc4242f007faa5f7fe1fa0c60
 			return true
 		}
 	}
@@ -18,21 +12,13 @@ const refreshScreen = (board) => {
 	board.frames++
 }
 
-<<<<<<< HEAD
 const createPiece = (pieces,frames) => {
-=======
-const createObstacle = (obstacles, frames) => {
->>>>>>> 7dee930b453bb78bc4242f007faa5f7fe1fa0c60
 	const IN = OBSTACLE_PARAMS
 	if (frames % IN.CREATE_INTERVAL === 0){
 		const width = randomWidth(IN.MAX_WIDTH, IN.MIN_WIDTH)
 		const side = randomSide()
-<<<<<<< HEAD
 		const type = randomType()
 		pieces.push(randomPiece(side, width, type))
-=======
-		obstacles.push(randomObstacle(side, width, IN))
->>>>>>> 7dee930b453bb78bc4242f007faa5f7fe1fa0c60
 	}
 }
 const randomType = () => {
@@ -57,13 +43,8 @@ const randomSide = () => {
 	return out
 }
 
-<<<<<<< HEAD
 const randomPiece = (side, width, type) => {
 	const IN = OBSTACLE_PARAMS
-=======
-
-const randomObstacle = (side, width, IN) => {
->>>>>>> 7dee930b453bb78bc4242f007faa5f7fe1fa0c60
 	const left = IN.COORDINATE.LEFT
 	const right = IN.COORDINATE.RIGHT
 	let out
